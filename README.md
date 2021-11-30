@@ -1,6 +1,42 @@
 # STM32F103CB_Maple_Mini_Clone_USB_CDC_Serial
 Boilerplate for USB CDC VCOM serial communication with STM32F103CB based Maple Mini Clone.
 
+### Folder Structure
+```
+--STM32F103CB_Maple_Mini_Clone_USB_CDC_Serial
+  |
+  |--lib
+  |  |
+  |  |--usb_serial_lib
+  |     |
+  |     |- delay.c
+  |     |- delay.h
+  |     |- usb_serial.c
+  |     |- usb_serial.h
+  |     |- usbcdc.c
+  |     |- usbcdc.h
+  |
+  |--src
+  |   |
+  |   |- main.c
+  |
+  |- platformio.ini
+```
+
+### Code Dependency
+```
+            [main.c]
+               |
+               |
+         [usb_serial.*]
+               |
+               |
+      +------------------+
+      |                  |
+      |                  |
+  [usbcdc.*]         [delay.*]
+```
+
 ### Built With
 * [PlatformIO IDE](https://platformio.org/platformio-ide) - IDE used for programming
 * [libopencm3](https://github.com/libopencm3/libopencm3) - Open-Source lowlevel hardware library for ARM Cortex-M microcontrollers
