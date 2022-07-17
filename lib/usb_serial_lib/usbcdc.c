@@ -23,7 +23,7 @@ static const struct usb_endpoint_descriptor comm_endp[] = {{
 	.bEndpointAddress = 0x83,	/* bit[7]=1b -> direction: IN; bit[3:0]=011b -> endpoint no. 3 */
 	.bmAttributes = USB_ENDPOINT_ATTR_INTERRUPT,
 	.wMaxPacketSize = CDC_COMM_PACKET_SIZE,
-	.bInterval = 255,			/* polling intervall in frames (USB2.0: 1 frame = 1ms) -> 255ms */
+	.bInterval = 255,			/* polling interval in frames (USB2.0: 1 frame = 1ms) -> 255ms */
 }};
 
 static const struct usb_endpoint_descriptor data_endp[] = {{
@@ -32,14 +32,14 @@ static const struct usb_endpoint_descriptor data_endp[] = {{
 	.bEndpointAddress = 0x01,	/* bit[7]=0b -> direction: OUT; bit[3:0]=001b -> endpoint no. 1 */
 	.bmAttributes = USB_ENDPOINT_ATTR_BULK,
 	.wMaxPacketSize = CDC_DATA_PACKET_SIZE,
-	.bInterval = 1,				/* polling intervall in frames (USB2.0: 1 frame = 1ms) -> 1ms */
+	.bInterval = 1,				/* polling interval in frames (USB2.0: 1 frame = 1ms) -> 1ms */
 }, {
 	.bLength = USB_DT_ENDPOINT_SIZE,
 	.bDescriptorType = USB_DT_ENDPOINT,
 	.bEndpointAddress = 0x82,	/* bit[7]=1b -> direction: IN; bit[3:0]=010b -> endpoint no. 2 */
 	.bmAttributes = USB_ENDPOINT_ATTR_BULK,
 	.wMaxPacketSize = CDC_DATA_PACKET_SIZE,
-	.bInterval = 1,				/* polling intervall in frames (USB2.0: 1 frame = 1ms) -> 1ms */
+	.bInterval = 1,				/* polling interval in frames (USB2.0: 1 frame = 1ms) -> 1ms */
 }};
 
 static const struct {
