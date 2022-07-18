@@ -47,7 +47,7 @@ static const struct {
 	struct usb_cdc_call_management_descriptor call_mgmt;
 	struct usb_cdc_acm_descriptor acm;
 	struct usb_cdc_union_descriptor cdc_union;
-}cdcacm_functional_descriptors = {
+} __attribute__((packed)) cdcacm_functional_descriptors = {
 	.header = {
 		.bFunctionLength = sizeof(struct usb_cdc_header_descriptor),
 		.bDescriptorType = CS_INTERFACE,
