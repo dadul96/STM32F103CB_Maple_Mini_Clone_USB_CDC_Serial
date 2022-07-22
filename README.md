@@ -1,5 +1,5 @@
 # STM32F103CB_Maple_Mini_Clone_USB_CDC_Serial
-Boilerplate for USB CDC VCOM serial communication with STM32F103CB based Maple Mini Clone.
+Boilerplate for USB CDC VCOM serial communication with STM32F103CB-based Maple Mini Clone.
 
 ### Folder Structure
 ```
